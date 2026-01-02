@@ -1,0 +1,61 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1">
+        <animate attributeName="stop-color" values="#2563eb;#7c3aed;#2563eb" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1">
+        <animate attributeName="stop-color" values="#7c3aed;#2563eb;#7c3aed" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="#0d1117" rx="10"/>
+  
+  <!-- Decorative lines -->
+  <line x1="50" y1="60" x2="750" y2="60" stroke="url(#gradient)" stroke-width="2" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="50" y1="140" x2="750" y2="140" stroke="url(#gradient)" stroke-width="2" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </line>
+  
+  <!-- Main text -->
+  <text x="400" y="110" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+        font-size="48" font-weight="600" fill="url(#gradient)" 
+        text-anchor="middle" filter="url(#shadow)">
+    Welcome to My GitHub
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="160" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+        font-size="18" font-weight="400" fill="#8b949e" 
+        text-anchor="middle" letter-spacing="2">
+    EXPLORE • CREATE • COLLABORATE
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="0.5s" fill="freeze"/>
+  </text>
+  
+  <!-- Animated corner accents -->
+  <path d="M 30 30 L 30 50 M 30 30 L 50 30" stroke="url(#gradient)" stroke-width="3" 
+        stroke-linecap="round" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 770 30 L 770 50 M 770 30 L 750 30" stroke="url(#gradient)" stroke-width="3" 
+        stroke-linecap="round" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  </path>
+  <path d="M 30 170 L 30 150 M 30 170 L 50 170" stroke="url(#gradient)" stroke-width="3" 
+        stroke-linecap="round" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </path>
+  <path d="M 770 170 L 770 150 M 770 170 L 750 170" stroke="url(#gradient)" stroke-width="3" 
+        stroke-linecap="round" fill="none" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+  </path>
+</svg>
